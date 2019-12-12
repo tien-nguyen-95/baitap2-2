@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <pre>Amount                   From     To      </pre>
+        <input type="text" id="num">
+        <select id="s1" >
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select>
+        <select id="s2">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+        </select>
+        <button type="button" onclick="convert()" style="background-color:rgb(189, 141, 189)">Convert</button>
+        <div id="hienthi">
+        
+        <script >
+           
+        function convert()
+        {   let num = parseInt(document.getElementById("num").value);
+            let s1= document.getElementById("s1").value;
+            let s2= document.getElementById("s2").value;
+            if(s1=="USD"&&s2=="VND")
+                document.getElementById("hienthi").innerHTML=num*23000;
+            else if(s1=="VND"&&s2=="USD")
+                document.getElementById("hienthi").innerHTML=num/23000;
+            else 
+                document.getElementById("hienthi").innerHTML=num;
+        }
+        </script>
+        
+</body>
+</html>
